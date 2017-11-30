@@ -1,6 +1,18 @@
-const config = require('./config/config.json');
-const model = require('./models');
+const DirWathcer = require('./src/dirwatcher');
+const Importer = require('./src/importer');
 
-console.log(config.name);
-const user = new model.User();
-const product = new model.Product();
+const PATH  = './data';
+
+const watcher = new DirWathcer();
+const importer = new Importer();
+
+watcher.watch(PATH);
+watcher.on('change', (path) => {
+    importer.import(path)
+        .then(files => {
+            console.log(files);
+        })
+        .catch(e => {
+            console.log(e);
+        });
+});
