@@ -9,10 +9,17 @@ const importer = new Importer();
 watcher.watch(PATH);
 watcher.on('change', (path) => {
     importer.import(path)
-        .then(files => {
+        .then((files) => {
             console.log(files);
         })
-        .catch(e => {
-            console.log(e);
+        .catch((error) => {
+            console.log(error);
         });
+
+    try {
+        const files = importer.importSync(path);
+        console.log(files);
+    } catch(e) {
+        console.log(e);
+    }
 });
