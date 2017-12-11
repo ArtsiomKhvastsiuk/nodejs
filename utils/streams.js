@@ -33,8 +33,8 @@ function inputOutput(filePath) {
 
 program
     .version('0.0.0')
-    .option('-a, --action <string>', 'action name (--action=nameOfAction)')
-    .option('-f, --file <string>', 'path to directory (--file=pathToFIle)');
+    .option('-a, --action <string>', 'action name')
+    .option('-f, --file <string>', 'path to directory');
 
 program.parse(process.argv);
 
