@@ -15,6 +15,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "commander": "^2.12.2",
+    "eslint": "^4.14.0",
     "nodemon": "^1.12.1",
     "request": "^2.83.0",
     "through2": "^2.0.3"

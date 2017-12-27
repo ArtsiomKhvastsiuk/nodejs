@@ -1,0 +1,8 @@
+aside {
+    background: green;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
