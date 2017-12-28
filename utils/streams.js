@@ -123,7 +123,7 @@ function cssBundler(directory) {
     });
 }
 
-program
+module.exports = program
     .version('0.0.0')
     .option('-a, --action <string>', 'action name')
     .option('-f, --file <string>', 'path to directory')

@@ -13,13 +13,13 @@ watcher.on('change', (path) => {
             console.log(files);
         })
         .catch((error) => {
-            console.log(error);
+            console.error(error);
         });
 
     try {
         const files = importer.importSync(path);
         console.log(files);
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
 });
