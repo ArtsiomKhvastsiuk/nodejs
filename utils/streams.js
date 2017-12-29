@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const fs = require('fs');
 const path = require('path');
 const program = require('commander');
@@ -116,9 +115,10 @@ function cssBundler(directory) {
         const req = http.request(URL_TO_CSS);
         req.on('response', (res) => {
             const writer = fs.createWriteStream(directory + '/bundle.css', {'flags': 'a'});
-            res.on('data', (chunk) => {
-                writer.write(chunk);
-            });
+            res.pipe(writer);
+        });
+        req.on('error', (error) => {
+           console.error(error);
         });
         req.end();
     });
