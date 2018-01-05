@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "laptop",
+    "cost": "250",
+    "reviews": [
+      "Good",
+      "Bad",
+      "Cool"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "car",
+    "cost": "15000",
+    "reviews": [
+      "Good",
+      "Bad",
+      "Cool"
+    ]
+  }
+]

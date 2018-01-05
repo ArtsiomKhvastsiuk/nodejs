@@ -1,3 +1,4 @@
+/*
 const DirWathcer = require('./src/dirwatcher');
 const Importer = require('./src/importer');
 
@@ -23,3 +24,9 @@ watcher.on('change', (path) => {
         console.error(e);
     }
 });
+*/
+
+import app from './app';
+
+const port = process.env.port || 8080;
+app.listen(port, () => console.log(`App listening on port ${port}`));
