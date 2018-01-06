@@ -1,12 +1,14 @@
 [
   {
     "id": "1",
-    "name": "inatmospheric",
-    "email": "inatmospheric@gmail.com"
+    "username": "inatmospheric",
+    "email": "inatmospheric@gmail.com",
+    "password": "123"
   },
   {
     "id": "2",
-    "name": "kasia",
-    "email": "kasia@gmail.com"
+    "username": "kasia",
+    "email": "kasia@gmail.com",
+    "password": "456"
   }
 ]
