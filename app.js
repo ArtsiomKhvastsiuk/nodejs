@@ -19,9 +19,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(favicon(path.join(__dirname, 'bin', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'bin')));
-
 
 app.use('/api', router);
 

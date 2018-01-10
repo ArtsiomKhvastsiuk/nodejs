@@ -28,9 +28,9 @@ router.post('/login', passport.authenticate('local', {session: false}), (req, re
     res.json({success: true});
 });
 
-router.get('/auth/google', passport.authenticate('google'));
+router.get('/auth/google', passport.authenticate('google'), {scope: ['profile', 'email']});
 
-router.get('/auth/google/callback', passport.authenticate('google', {scope: ['profile', 'email']}), (req, res) => {
+router.get('/auth/google/callback', passport.authenticate('google'), (req, res) => {
     res.json({success: true});
 });
 
